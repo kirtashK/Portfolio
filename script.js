@@ -5,13 +5,14 @@
   future features (theme toggle, language switcher) plug in the same way.
 */
 
+/*
+  Note: the "has-js" class and the initial data-theme are set by a small
+  inline script in the <head> of index.html, so they apply before first paint.
+*/
+
 const mobileNavBreakpoint = window.matchMedia("(min-width: 40em)");
-
-/* ---------- Progressive enhancement flag ---------- */
-
-function markJavaScriptAvailable() {
-  document.documentElement.classList.add("has-js");
-}
+const systemDarkPreference = window.matchMedia("(prefers-color-scheme: dark)");
+const themeStorageKey = "portfolio-theme";
 
 /* ---------- Mobile navigation toggle ---------- */
 
@@ -56,6 +57,54 @@ function initNavToggle() {
   });
 }
 
+/* ---------- Theme toggle (light / dark) ---------- */
+
+function getSavedTheme() {
+  try {
+    return localStorage.getItem(themeStorageKey);
+  } catch (error) {
+    return null; // Storage blocked (e.g. private mode): fall back to system theme
+  }
+}
+
+function saveTheme(themeName) {
+  try {
+    localStorage.setItem(themeStorageKey, themeName);
+  } catch (error) {
+    // Storage blocked: the choice simply won't persist across visits
+  }
+}
+
+function initThemeToggle() {
+  const themeToggleButton = document.querySelector(".theme-toggle");
+  const rootElement = document.documentElement;
+
+  if (!themeToggleButton) {
+    return;
+  }
+
+  function applyTheme(themeName) {
+    rootElement.setAttribute("data-theme", themeName);
+    themeToggleButton.setAttribute("aria-pressed", String(themeName === "dark"));
+  }
+
+  // Sync the button with the theme chosen by the inline <head> script
+  applyTheme(rootElement.getAttribute("data-theme") === "dark" ? "dark" : "light");
+
+  themeToggleButton.addEventListener("click", () => {
+    const nextTheme = rootElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    applyTheme(nextTheme);
+    saveTheme(nextTheme);
+  });
+
+  // Follow system changes until the visitor picks a theme themselves
+  systemDarkPreference.addEventListener("change", (event) => {
+    if (!getSavedTheme()) {
+      applyTheme(event.matches ? "dark" : "light");
+    }
+  });
+}
+
 /* ---------- Footer year ---------- */
 
 function setFooterYear() {
@@ -69,8 +118,8 @@ function setFooterYear() {
 /* ---------- Init ---------- */
 
 function init() {
-  markJavaScriptAvailable();
   initNavToggle();
+  initThemeToggle();
   setFooterYear();
 }
 
