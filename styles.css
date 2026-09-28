@@ -545,9 +545,9 @@ section[id] {
   margin-top: var(--space-xl);
 }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .contact-list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
