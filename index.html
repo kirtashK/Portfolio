@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Your Name] · Portfolio</title>
+  <meta name="description" content="[Your Name]: [One-line tagline]. Portfolio, projects and contact.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!--
+    Content editing:
+    All visible text lives in this file. Every translatable element has a
+    data-i18n key (e.g. "hero.tagline") so a language switcher can later
+    replace text by key without changing the markup.
+    Placeholders are written in [square brackets].
+  -->
+
+  <a class="skip-link" href="#main-content" data-i18n="nav.skip">Skip to content</a>
+
+  <!-- ========== Header / Navigation ========== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="#hero" data-i18n="nav.brand">[Your Name]</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+        <span class="visually-hidden" data-i18n="nav.menu">Menu</span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="#about" data-i18n="nav.about">About</a></li>
+          <li><a class="primary-nav__link" href="#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a class="primary-nav__link" href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ========== Hero ========== -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <p class="hero__greeting" data-i18n="hero.greeting">Hi, I'm</p>
+        <h1 id="hero-title" class="hero__name" data-i18n="hero.name">[Your Name]</h1>
+        <p class="hero__tagline" data-i18n="hero.tagline">[One-line tagline, e.g. "Backend developer who likes clean APIs"]</p>
+        <p class="hero__intro" data-i18n="hero.intro">
+          [Short intro: one or two sentences about what you do and what you're looking for.]
+        </p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#projects" data-i18n="hero.ctaProjects">View my work</a>
+          <a class="button button--secondary" href="#contact" data-i18n="hero.ctaContact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== About ========== -->
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title" class="section__title" data-i18n="about.title">About me</h2>
+        <p class="about__bio" data-i18n="about.bio">
+          [Short bio, 2–4 sentences: your background, what you enjoy working on,
+          the technologies you use most, and something personal if you like.]
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== Projects ========== -->
+    <section id="projects" class="section projects" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title" class="section__title" data-i18n="projects.title">Projects</h2>
+
+        <ul class="project-grid">
+          <li>
+            <article class="project-card">
+              <h3 class="project-card__title" data-i18n="projects.project1.title">[Project 1 title]</h3>
+              <p class="project-card__description" data-i18n="projects.project1.description">
+                [Short description: what it does and what problem it solves.]
+              </p>
+              <ul class="tag-list" aria-label="Technologies">
+                <li class="tag">[Tech 1]</li>
+                <li class="tag">[Tech 2]</li>
+                <li class="tag">[Tech 3]</li>
+              </ul>
+              <a class="project-card__link" href="#">
+                <span data-i18n="projects.viewProject">View project</span>
+                <span class="visually-hidden">: [Project 1 title]</span>
+              </a>
+            </article>
+          </li>
+
+          <li>
+            <article class="project-card">
+              <h3 class="project-card__title" data-i18n="projects.project2.title">[Project 2 title]</h3>
+              <p class="project-card__description" data-i18n="projects.project2.description">
+                [Short description: what it does and what problem it solves.]
+              </p>
+              <ul class="tag-list" aria-label="Technologies">
+                <li class="tag">[Tech 1]</li>
+                <li class="tag">[Tech 2]</li>
+              </ul>
+              <a class="project-card__link" href="#">
+                <span data-i18n="projects.viewProject">View project</span>
+                <span class="visually-hidden">: [Project 2 title]</span>
+              </a>
+            </article>
+          </li>
+
+          <li>
+            <article class="project-card">
+              <h3 class="project-card__title" data-i18n="projects.project3.title">[Project 3 title]</h3>
+              <p class="project-card__description" data-i18n="projects.project3.description">
+                [Short description: what it does and what problem it solves.]
+              </p>
+              <ul class="tag-list" aria-label="Technologies">
+                <li class="tag">[Tech 1]</li>
+                <li class="tag">[Tech 2]</li>
+                <li class="tag">[Tech 3]</li>
+              </ul>
+              <a class="project-card__link" href="#">
+                <span data-i18n="projects.viewProject">View project</span>
+                <span class="visually-hidden">: [Project 3 title]</span>
+              </a>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== Contact ========== -->
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title" class="section__title" data-i18n="contact.title">Contact</h2>
+        <p class="contact__intro" data-i18n="contact.intro">
+          [A sentence inviting people to reach out, e.g. "I'm open to new opportunities. Feel free to say hello."]
+        </p>
+        <ul class="contact-list">
+          <li>
+            <a class="contact-list__link" href="mailto:[your-email@example.com]">
+              <span class="contact-list__label" data-i18n="contact.email">Email</span>
+              <span class="contact-list__value">[your-email@example.com]</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact-list__link" href="https://github.com/[your-username]" rel="me">
+              <span class="contact-list__label">GitHub</span>
+              <span class="contact-list__value">github.com/[your-username]</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact-list__link" href="https://www.linkedin.com/in/[your-profile]" rel="me">
+              <span class="contact-list__label">LinkedIn</span>
+              <span class="contact-list__value">linkedin.com/in/[your-profile]</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== Footer ========== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>
+        &copy; <span id="current-year">2026</span> <span data-i18n="footer.name">[Your Name]</span>.
+        <span data-i18n="footer.note">Built with plain HTML, CSS and JavaScript.</span>
+      </p>
+      <a class="site-footer__top-link" href="#hero" data-i18n="footer.backToTop">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>
