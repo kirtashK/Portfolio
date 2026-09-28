@@ -36,6 +36,7 @@
   --color-accent-soft-text: #134e4a;
   --color-focus: #0f766e;
   --color-shadow: rgb(15 23 42 / 0.08);
+  color-scheme: light;
 
   /* Typography */
   --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -75,6 +76,25 @@
   :root {
     --container-gutter: 2rem;
   }
+}
+
+/* Dark theme: data-theme is set on <html> by the inline script in
+   index.html (saved choice, else the system preference). */
+:root[data-theme="dark"] {
+  --color-bg: #0f172a;
+  --color-surface: #1e293b;
+  --color-surface-muted: #0b1222;
+  --color-text: #e2e8f0;
+  --color-text-muted: #a3b1c6;
+  --color-border: #334155;
+  --color-accent: #2dd4bf;
+  --color-accent-hover: #5eead4;
+  --color-accent-contrast: #0f172a;
+  --color-accent-soft: #134e4a;
+  --color-accent-soft-text: #ccfbf1;
+  --color-focus: #5eead4;
+  --color-shadow: rgb(0 0 0 / 0.35);
+  color-scheme: dark;
 }
 
 
@@ -241,11 +261,12 @@ section[id] {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  gap: var(--space-xs) var(--space-md);
   min-height: var(--header-height);
 }
 
 .site-header__brand {
+  margin-right: auto;
   color: var(--color-text);
   font-size: var(--font-size-md);
   font-weight: 700;
@@ -331,14 +352,66 @@ section[id] {
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* Mobile behavior once JS is active */
+/* Theme toggle: needs JS, so it only appears once JS is running */
+.theme-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.has-js .theme-toggle {
+  display: inline-flex;
+}
+
+.theme-toggle:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.theme-toggle__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Show the icon for the theme you would switch to */
+.theme-toggle__icon--sun,
+[data-theme="dark"] .theme-toggle__icon--moon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle__icon--sun {
+  display: block;
+}
+
+/* Mobile behavior once JS is active.
+   Visual order: brand, theme toggle, menu button, then the nav on its own row. */
 @media (max-width: 39.99em) {
   .has-js .nav-toggle {
     display: inline-flex;
+    order: 2;
+  }
+
+  .has-js .theme-toggle {
+    order: 1;
   }
 
   .has-js .primary-nav {
     display: none;
+    order: 3;
     flex-basis: 100%;
     padding-bottom: var(--space-md);
   }
