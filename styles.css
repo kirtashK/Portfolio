@@ -108,8 +108,11 @@
   box-sizing: border-box;
 }
 
+/* scroll-padding-top keeps anchor targets and keyboard focus from ending up
+   hidden under the sticky header (header height plus its 1px border). */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 1px);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -154,12 +157,6 @@ a:hover {
   outline: 3px solid var(--color-focus);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
-}
-
-/* Keep section headings clear of the header when jumping via nav links
-   (and when the header becomes sticky later). */
-section[id] {
-  scroll-margin-top: var(--header-height);
 }
 
 
@@ -246,15 +243,23 @@ section[id] {
 
 /* ==========================================================================
    5. Header and navigation
+   The header stays pinned to the top while scrolling (sticky).
    Mobile: links collapse behind a toggle button (only when JS is running,
    so the menu stays usable without JS). Wider screens: inline links.
    ========================================================================== */
 
 .site-header {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 10;
   background-color: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
+  transition: box-shadow var(--transition-fast);
+}
+
+/* Added by script.js once the page is scrolled: header floats above content */
+.site-header.is-scrolled {
+  box-shadow: 0 2px 12px var(--color-shadow);
 }
 
 .site-header__inner {
@@ -292,6 +297,12 @@ section[id] {
 
 .primary-nav__link:hover {
   color: var(--color-accent);
+}
+
+/* Link of the section currently being read (set by script.js) */
+.primary-nav__link[aria-current="location"] {
+  color: var(--color-accent);
+  box-shadow: inset 0 -2px 0 var(--color-accent);
 }
 
 /* Section links and the language switcher sit side by side */
@@ -480,6 +491,12 @@ section[id] {
   .has-js .primary-nav__link {
     display: block;
     padding: var(--space-sm) 0;
+  }
+
+  /* Full-width links: mark the current one with a side bar instead */
+  .has-js .primary-nav__link[aria-current="location"] {
+    padding-left: var(--space-sm);
+    box-shadow: inset 3px 0 0 var(--color-accent);
   }
 }
 
