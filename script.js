@@ -1,13 +1,12 @@
 /*
-  Portfolio behavior.
-  This file holds behavior only. All visible text lives in index.html.
-  Each feature is a small init function called from init() below;
-  future features (theme toggle, language switcher) plug in the same way.
+  Portfolio behavior, shared by the English (index.html) and Spanish
+  (es/index.html) pages. This file holds behavior only, no visible text.
+  Each feature is a small init function called from init() below.
 */
 
 /*
-  Note: the "has-js" class and the initial data-theme are set by a small
-  inline script in the <head> of index.html, so they apply before first paint.
+  Note: the "has-js" class and the initial data-theme are set by
+  theme-init.js in the <head>, so they apply before first paint.
 */
 
 const mobileNavBreakpoint = window.matchMedia("(min-width: 40em)");
@@ -105,6 +104,36 @@ function initThemeToggle() {
   });
 }
 
+/* ---------- Language switcher ---------- */
+
+// Both language pages use the same section ids, so switching language
+// can land on the section the visitor is currently reading.
+function getCurrentSectionId() {
+  const readingLine = window.innerHeight / 3;
+  let currentSectionId = "";
+
+  document.querySelectorAll("main section[id]").forEach((section) => {
+    if (section.getBoundingClientRect().top <= readingLine) {
+      currentSectionId = section.id;
+    }
+  });
+
+  return currentSectionId === "hero" ? "" : currentSectionId;
+}
+
+function initLanguageSwitcher() {
+  const otherLanguageLinks = document.querySelectorAll(
+    '.language-switcher__link:not([aria-current="page"])'
+  );
+
+  otherLanguageLinks.forEach((languageLink) => {
+    languageLink.addEventListener("click", () => {
+      const currentSectionId = getCurrentSectionId();
+      languageLink.hash = currentSectionId ? `#${currentSectionId}` : "";
+    });
+  });
+}
+
 /* ---------- Footer year ---------- */
 
 function setFooterYear() {
@@ -120,6 +149,7 @@ function setFooterYear() {
 function init() {
   initNavToggle();
   initThemeToggle();
+  initLanguageSwitcher();
   setFooterYear();
 }
 
