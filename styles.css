@@ -8,10 +8,12 @@
    6. Hero
    7. Sections (shared)
    8. About
-   9. Projects
-   10. Contact
-   11. Footer
-   12. Reduced motion
+   9. Skills
+   10. Experience
+   11. Projects
+   12. Contact
+   13. Footer
+   14. Reduced motion
    ========================================================================== */
 
 
@@ -128,12 +130,15 @@ body {
 h1,
 h2,
 h3,
+h4,
 p,
-ul {
+ul,
+ol {
   margin: 0;
 }
 
-ul {
+ul,
+ol {
   padding: 0;
   list-style: none;
 }
@@ -456,9 +461,10 @@ a:hover {
   display: block;
 }
 
-/* Mobile behavior once JS is active.
+/* Collapsed-menu behavior once JS is active (phones and tablets).
+   Keep this breakpoint in sync with expandedNavBreakpoint in script.js.
    Visual order: brand, theme toggle, menu button, then the nav on its own row. */
-@media (max-width: 39.99em) {
+@media (max-width: 63.99em) {
   .has-js .nav-toggle {
     display: inline-flex;
     order: 2;
@@ -595,7 +601,116 @@ a:hover {
 
 
 /* ==========================================================================
-   9. Projects
+   9. Skills
+   Groups of tags (tag styles are shared with the project cards).
+   Grid: 1 column on mobile, 2 on tablets, 3 on desktops.
+   ========================================================================== */
+
+.skills {
+  background-color: var(--color-surface-muted);
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 40em) {
+  .skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .skill-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skill-group {
+  padding: var(--space-lg);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.skill-group__title {
+  font-size: var(--font-size-md);
+  line-height: 1.3;
+}
+
+
+/* ==========================================================================
+   10. Experience
+   Two timelines (work, education): stacked on mobile, side by side on
+   wider screens. Each timeline is a vertical line with a dot per entry.
+   ========================================================================== */
+
+.experience__columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 48em) {
+  .experience__columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2xl);
+  }
+}
+
+.experience__subtitle {
+  margin-bottom: var(--space-lg);
+  font-size: var(--font-size-lg);
+  line-height: 1.3;
+}
+
+.timeline {
+  display: grid;
+  gap: var(--space-lg);
+  margin-left: var(--space-xs);
+  border-left: 2px solid var(--color-border);
+}
+
+.timeline__item {
+  position: relative;
+  padding-left: var(--space-lg);
+}
+
+/* Dot centered on the timeline's line */
+.timeline__item::before {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  left: -0.4375rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--color-accent);
+  border: 2px solid var(--color-bg);
+  border-radius: 50%;
+}
+
+.timeline__title {
+  font-size: var(--font-size-md);
+  line-height: 1.3;
+}
+
+.timeline__meta {
+  margin-top: var(--space-2xs);
+  color: var(--color-accent);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.timeline__description {
+  margin-top: var(--space-xs);
+  color: var(--color-text-muted);
+}
+
+
+/* ==========================================================================
+   11. Projects
    Grid: 1 column on mobile, 2 on tablets, 3 on desktops.
    ========================================================================== */
 
@@ -672,7 +787,7 @@ a:hover {
 
 
 /* ==========================================================================
-   10. Contact
+   12. Contact
    ========================================================================== */
 
 .contact__intro {
@@ -727,7 +842,7 @@ a:hover {
 
 
 /* ==========================================================================
-   11. Footer
+   13. Footer
    ========================================================================== */
 
 .site-footer {
@@ -754,7 +869,7 @@ a:hover {
 
 
 /* ==========================================================================
-   12. Reduced motion
+   14. Reduced motion
    ========================================================================== */
 
 @media (prefers-reduced-motion: reduce) {
