@@ -9,7 +9,8 @@
   theme-init.js in the <head>, so they apply before first paint.
 */
 
-const mobileNavBreakpoint = window.matchMedia("(min-width: 40em)");
+// Keep in sync with the collapsed-menu media query in styles.css
+const expandedNavBreakpoint = window.matchMedia("(min-width: 64em)");
 const systemDarkPreference = window.matchMedia("(prefers-color-scheme: dark)");
 const themeStorageKey = "portfolio-theme";
 const navCloseScrollDistance = 40; // px scrolled before an open mobile menu closes
@@ -158,7 +159,7 @@ function initNavToggle() {
   });
 
   // Reset state when resizing up to the desktop layout
-  mobileNavBreakpoint.addEventListener("change", (event) => {
+  expandedNavBreakpoint.addEventListener("change", (event) => {
     if (event.matches) {
       setNavOpen(false);
     }
