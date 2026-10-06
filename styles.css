@@ -785,6 +785,14 @@ a:hover {
   content: " \2192";
 }
 
+/* Shown in place of the link when a project has nothing public to link to */
+.project-card__note {
+  margin-top: auto;
+  padding-top: var(--space-lg);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
 
 /* ==========================================================================
    12. Contact
