@@ -711,7 +711,7 @@ a:hover {
 
 /* ==========================================================================
    11. Projects
-   Grid: 1 column on mobile, 2 on tablets, 3 on desktops.
+   Grid: 1 column on mobile, 2 from tablets up (four cards make a 2x2 grid).
    ========================================================================== */
 
 .projects {
@@ -727,12 +727,6 @@ a:hover {
 @media (min-width: 40em) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 64em) {
-  .project-grid {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
