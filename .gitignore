@@ -18,4 +18,5 @@ Desktop.ini
 
 # Local tooling
 node_modules/
-.claude/settings.local.json
+.claude/
+NEXT_STEPS.md
