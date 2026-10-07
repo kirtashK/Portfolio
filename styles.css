@@ -711,7 +711,7 @@ a:hover {
 
 /* ==========================================================================
    11. Projects
-   Grid: 1 column on mobile, 2 on tablets, 3 on desktops.
+   Grid: 1 column on mobile, 2 from tablets up (four cards make a 2x2 grid).
    ========================================================================== */
 
 .projects {
@@ -727,12 +727,6 @@ a:hover {
 @media (min-width: 40em) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 64em) {
-  .project-grid {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -783,6 +777,14 @@ a:hover {
 
 .project-card__link::after {
   content: " \2192";
+}
+
+/* Shown in place of the link when a project has nothing public to link to */
+.project-card__note {
+  margin-top: auto;
+  padding-top: var(--space-lg);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
 }
 
 

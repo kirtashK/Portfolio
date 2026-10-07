@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marcos Morales Márquez · Portfolio</title>
-  <meta name="description" content="Marcos Morales Márquez: [One-line tagline]. Portfolio, projects and contact.">
+  <meta name="description" content="Marcos Morales Márquez: Computer Engineer. Portfolio, projects and contact.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <!-- Language versions (absolute URLs, required by search engines) -->
   <link rel="alternate" hreflang="en" href="https://kirtashk.github.io/Portfolio/">
@@ -19,9 +19,7 @@
   <!--
     English version of the site. The Spanish version is es/index.html.
     Both pages share styles.css, script.js and assets/, and keep the same
-    structure and section ids: when you add or move a section here, do the
-    same in es/index.html.
-    Placeholders are written in [square brackets].
+    structure and section ids
   -->
 
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -80,9 +78,9 @@
       <div class="container">
         <p class="hero__greeting">Hi, I'm</p>
         <h1 id="hero-title" class="hero__name">Marcos Morales Márquez</h1>
-        <p class="hero__tagline">[One-line tagline, e.g. "Backend developer who likes clean APIs"]</p>
+        <p class="hero__tagline">Computer Engineer</p>
         <p class="hero__intro">
-          [Short intro: one or two sentences about what you do and what you're looking for.]
+          Computer Engineering graduate with experience in C++, Java, JavaScript, Python and databases.
         </p>
         <div class="hero__actions">
           <a class="button button--primary" href="#projects">View my work</a>
@@ -96,8 +94,7 @@
       <div class="container">
         <h2 id="about-title" class="section__title">About me</h2>
         <p class="about__bio">
-          [Short bio, 2–4 sentences: your background, what you enjoy working on,
-          the technologies you use most, and something personal if you like.]
+          I'm a Computer Engineering graduate from the Universidad de Cádiz, with a mention in Information Systems. I have worked with Java and Spring Boot, C#, C++, JavaScript, Python and SQL databases, and I interned as a DevOps engineer at Babel in 2025. My final degree project, graded 9/10, applied Deep Reinforcement Learning to a real-time strategy video game built in Unity. I speak Spanish natively and English at a B2 level.
         </p>
       </div>
     </section>
@@ -110,29 +107,74 @@
         <!-- One <li> per group. Add or remove groups and tags freely. -->
         <ul class="skill-grid">
           <li class="skill-group">
+            <h3 class="skill-group__title">Programming languages</h3>
+            <ul class="tag-list">
+              <li class="tag">C++</li>
+              <li class="tag">C#</li>
+              <li class="tag">Java</li>
+              <li class="tag">JavaScript</li>
+              <li class="tag">Python</li>
+              <li class="tag">PHP</li>
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+            </ul>
+          </li>
+
+          <li class="skill-group">
+            <h3 class="skill-group__title">Frameworks and backend</h3>
+            <ul class="tag-list">
+              <li class="tag">Spring Boot</li>
+              <li class="tag">Node.js</li>
+              <li class="tag">Unity</li>
+              <li class="tag">REST</li>
+              <li class="tag">SOAP</li>
+              <li class="tag">Kafka</li>
+              <li class="tag">Maven</li>
+              <li class="tag">Mockito</li>
+            </ul>
+          </li>
+
+          <li class="skill-group">
+            <h3 class="skill-group__title">Databases</h3>
+            <ul class="tag-list">
+              <li class="tag">MySQL</li>
+              <li class="tag">Oracle</li>
+              <li class="tag">PostgreSQL</li>
+            </ul>
+          </li>
+
+          <li class="skill-group">
+            <h3 class="skill-group__title">Tools and DevOps</h3>
+            <ul class="tag-list">
+              <li class="tag">Git</li>
+              <li class="tag">Gitflow</li>
+              <li class="tag">Fork</li>
+              <li class="tag">Docker</li>
+              <li class="tag">Azure DevOps</li>
+              <li class="tag">Prometheus</li>
+              <li class="tag">Jira</li>
+              <li class="tag">Postman</li>
+              <li class="tag">DBeaver</li>
+            </ul>
+          </li>
+
+          <li class="skill-group">
+            <h3 class="skill-group__title">Practices</h3>
+            <ul class="tag-list">
+              <li class="tag">SOLID</li>
+              <li class="tag">Clean Code</li>
+              <li class="tag">Hexagonal Architecture</li>
+              <li class="tag">MVC</li>
+              <li class="tag">Unit Testing</li>
+              <li class="tag">Scrum</li>
+            </ul>
+          </li>
+
+          <li class="skill-group">
             <h3 class="skill-group__title">Languages</h3>
             <ul class="tag-list">
-              <li class="tag">[Language 1]</li>
-              <li class="tag">[Language 2]</li>
-              <li class="tag">[Language 3]</li>
-            </ul>
-          </li>
-
-          <li class="skill-group">
-            <h3 class="skill-group__title">Frameworks and libraries</h3>
-            <ul class="tag-list">
-              <li class="tag">[Framework 1]</li>
-              <li class="tag">[Framework 2]</li>
-              <li class="tag">[Framework 3]</li>
-            </ul>
-          </li>
-
-          <li class="skill-group">
-            <h3 class="skill-group__title">Tools</h3>
-            <ul class="tag-list">
-              <li class="tag">[Tool 1]</li>
-              <li class="tag">[Tool 2]</li>
-              <li class="tag">[Tool 3]</li>
+              <li class="tag">Spanish (native)</li>
+              <li class="tag">English (B2, preparing C1)</li>
             </ul>
           </li>
         </ul>
@@ -150,17 +192,24 @@
             <h3 class="experience__subtitle">Work</h3>
             <ol class="timeline">
               <li class="timeline__item">
-                <h4 class="timeline__title">[Job title]</h4>
-                <p class="timeline__meta">[Company] · [Start year] – [End year or "Present"]</p>
+                <h4 class="timeline__title">DevOps Engineer (Internship)</h4>
+                <p class="timeline__meta">Babel · March 2025 - September 2025</p>
                 <p class="timeline__description">
-                  [One or two sentences: what you did and what you achieved.]
+                  A two-month Java Spring bootcamp, followed by four months working for a banking client. Fixed dozens of vulnerabilities, patched the 8 development and test servers of two projects, managed firewalls and Non Personal Accounts, handled monitoring and alerts, decommissioned external connections, and kept both projects compliant with their IT Risk controls.
                 </p>
               </li>
               <li class="timeline__item">
-                <h4 class="timeline__title">[Job title]</h4>
-                <p class="timeline__meta">[Company] · [Start year] – [End year]</p>
+                <h4 class="timeline__title">IT Volunteer</h4>
+                <p class="timeline__meta">Colegio Salesiano Manuel Lora Tamayo · September 2022 - June 2023</p>
                 <p class="timeline__description">
-                  [One or two sentences: what you did and what you achieved.]
+                  Repaired about 12 computers and maintained connections and hardware. Built a Java attendance tracker that replaced the manual logging of each volunteer's entry and exit, and migrated the school's recipient records from Excel spreadsheets to a MySQL database. Both stayed in use afterwards.
+                </p>
+              </li>
+              <li class="timeline__item">
+                <h4 class="timeline__title">Computer Engineer (Internship)</h4>
+                <p class="timeline__meta">Dynamics VR SL · June 2022 - August 2022</p>
+                <p class="timeline__description">
+                  Developed CRUD operations and tests for the company's MySQL database, built the back-end for its website, and maintained the database, which went into production.
                 </p>
               </li>
             </ol>
@@ -170,17 +219,17 @@
             <h3 class="experience__subtitle">Education</h3>
             <ol class="timeline">
               <li class="timeline__item">
-                <h4 class="timeline__title">[Degree or course]</h4>
-                <p class="timeline__meta">[School or institution] · [Start year] – [End year]</p>
+                <h4 class="timeline__title">Computer Engineering degree</h4>
+                <p class="timeline__meta">Universidad de Cádiz · September 2019 - July 2026</p>
                 <p class="timeline__description">
-                  [Optional: one sentence on the focus, final project or result.]
+                  Mention in Information Systems. Final degree project graded 9/10: Prism Guard, a real-time strategy video game in Unity (C#) with a hero unit trained with Deep Reinforcement Learning (ML-Agents) to choose its targets and use its abilities.
                 </p>
               </li>
               <li class="timeline__item">
-                <h4 class="timeline__title">[Degree or course]</h4>
-                <p class="timeline__meta">[School or institution] · [Start year] – [End year]</p>
+                <h4 class="timeline__title">Java Spring Bootcamp (200 hours)</h4>
+                <p class="timeline__meta">Babel · March 2025 - April 2025</p>
                 <p class="timeline__description">
-                  [Optional: one sentence on the focus, final project or result.]
+                  Java, Spring Boot, SOLID principles, Clean Code, hexagonal architecture, unit testing with Mockito, REST and SOAP, Kafka, Docker, PostgreSQL, Scrum and Gitflow.
                 </p>
               </li>
             </ol>
@@ -197,54 +246,67 @@
         <ul class="project-grid">
           <li>
             <article class="project-card">
-              <h3 class="project-card__title">[Project 1 title]</h3>
+              <h3 class="project-card__title">Prism Guard: a real-time strategy game with a self-learning AI</h3>
               <p class="project-card__description">
-                [Short description: what it does and what problem it solves.]
+                Final degree project, graded 9/10: a 3D real-time strategy and base-management game built in Unity, where you defend a crystal from waves of enemies. Its hero unit is trained with Deep Reinforcement Learning (ML-Agents, PPO): it learns when to use abilities such as area damage, self-healing and area healing without wasting them, and which targets to attack first depending on the situation. A playable Windows build is available in the repository.
               </p>
               <ul class="tag-list" aria-label="Technologies">
-                <li class="tag">[Tech 1]</li>
-                <li class="tag">[Tech 2]</li>
-                <li class="tag">[Tech 3]</li>
+                <li class="tag">Unity</li>
+                <li class="tag">C#</li>
+                <li class="tag">ML-Agents</li>
+                <li class="tag">Machine Learning</li>
+                <li class="tag">Deep Reinforcement Learning</li>
               </ul>
-              <a class="project-card__link" href="#">
+              <a class="project-card__link" href="https://github.com/kirtashK/TFG-PrismGuard">
                 <span>View project</span>
-                <span class="visually-hidden">: [Project 1 title]</span>
+                <span class="visually-hidden">: Prism Guard: a real-time strategy game with a self-learning AI</span>
               </a>
             </article>
           </li>
 
           <li>
             <article class="project-card">
-              <h3 class="project-card__title">[Project 2 title]</h3>
+              <h3 class="project-card__title">Game mods for Minecraft, Hytale and Songs of Syx</h3>
               <p class="project-card__description">
-                [Short description: what it does and what problem it solves.]
+                11 mods across three games, with over 47,000 unique subscribers combined and about 96% positive ratings (over 550 ratings). They range from performance improvements and content overhauls to new enemies, new weapons and farming automation.
               </p>
               <ul class="tag-list" aria-label="Technologies">
-                <li class="tag">[Tech 1]</li>
-                <li class="tag">[Tech 2]</li>
+                <li class="tag">Java</li>
+                <li class="tag">Game modding</li>
               </ul>
-              <a class="project-card__link" href="#">
+              <p class="project-card__note">Published on the Steam Workshop and CurseForge</p>
+            </article>
+          </li>
+
+          <li>
+            <article class="project-card">
+              <h3 class="project-card__title">Portfolio website</h3>
+              <p class="project-card__description">
+                This site: a responsive, accessible portfolio in English and Spanish with a dark theme, built with plain HTML, CSS and JavaScript.
+              </p>
+              <ul class="tag-list" aria-label="Technologies">
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">JavaScript</li>
+              </ul>
+              <a class="project-card__link" href="https://github.com/kirtashK/Portfolio">
                 <span>View project</span>
-                <span class="visually-hidden">: [Project 2 title]</span>
+                <span class="visually-hidden">: Portfolio website</span>
               </a>
             </article>
           </li>
 
           <li>
             <article class="project-card">
-              <h3 class="project-card__title">[Project 3 title]</h3>
+              <h3 class="project-card__title">Volunteer attendance tracker</h3>
               <p class="project-card__description">
-                [Short description: what it does and what problem it solves.]
+                Java program that replaced the manual logging of each volunteer's entry and exit at Colegio Salesiano Manuel Lora Tamayo, alongside a MySQL database that took over the recipient records previously kept in Excel.
               </p>
               <ul class="tag-list" aria-label="Technologies">
-                <li class="tag">[Tech 1]</li>
-                <li class="tag">[Tech 2]</li>
-                <li class="tag">[Tech 3]</li>
+                <li class="tag">Java</li>
+                <li class="tag">MySQL</li>
               </ul>
-              <a class="project-card__link" href="#">
-                <span>View project</span>
-                <span class="visually-hidden">: [Project 3 title]</span>
-              </a>
+              <p class="project-card__note">Source code not available</p>
             </article>
           </li>
         </ul>
@@ -256,7 +318,7 @@
       <div class="container">
         <h2 id="contact-title" class="section__title">Contact</h2>
         <p class="contact__intro">
-          [A sentence inviting people to reach out, e.g. "I'm open to new opportunities. Feel free to say hello."]
+          I'm open to new opportunities and able to work remotely. Feel free to get in touch.
         </p>
         <ul class="contact-list">
           <li>
