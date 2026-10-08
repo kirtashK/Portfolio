@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcos Morales Márquez · Portfolio</title>
+  <meta name="description" content="Marcos Morales Márquez: Computer Engineer. Portfolio, projects and contact.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <!-- Language versions (absolute URLs, required by search engines) -->
+  <link rel="alternate" hreflang="en" href="https://kirtashk.github.io/Portfolio/">
+  <link rel="alternate" hreflang="es" href="https://kirtashk.github.io/Portfolio/es/">
+  <link rel="alternate" hreflang="x-default" href="https://kirtashk.github.io/Portfolio/">
+  <link rel="canonical" href="https://kirtashk.github.io/Portfolio/">
+  <!-- Link preview shown when the site is shared (LinkedIn, WhatsApp...).
+       URLs must be absolute. The image is a 1200x630 capture of the hero. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Marcos Morales Márquez">
+  <meta property="og:title" content="Marcos Morales Márquez · Computer Engineer">
+  <meta property="og:description" content="Computer Engineering graduate with experience in C++, Java, JavaScript, Python and databases. Projects, experience and contact.">
+  <meta property="og:url" content="https://kirtashk.github.io/Portfolio/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:image" content="https://kirtashk.github.io/Portfolio/assets/images/preview-en.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Home section of Marcos Morales Márquez's portfolio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="styles.css">
+  <script src="theme-init.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!--
+    English version of the site. The Spanish version is es/index.html.
+    Both pages share styles.css, script.js and assets/, and keep the same
+    structure and section ids
+  -->
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- ========== Header / Navigation ========== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="#hero">Marcos Morales Márquez</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="#about">About</a></li>
+          <li><a class="primary-nav__link" href="#skills">Skills</a></li>
+          <li><a class="primary-nav__link" href="#experience">Experience</a></li>
+          <li><a class="primary-nav__link" href="#projects">Projects</a></li>
+          <li><a class="primary-nav__link" href="#contact">Contact</a></li>
+        </ul>
+
+        <ul class="language-switcher" aria-label="Language">
+          <li>
+            <a class="language-switcher__link" href="./" hreflang="en" lang="en" aria-current="page">
+              <span aria-hidden="true">EN</span><span class="visually-hidden">English</span>
+            </a>
+          </li>
+          <li>
+            <a class="language-switcher__link" href="es/" hreflang="es" lang="es">
+              <span aria-hidden="true">ES</span><span class="visually-hidden">Español</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="theme-toggle" type="button" aria-pressed="false">
+        <!-- Moon: shown in light theme (click for dark) -->
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+        </svg>
+        <!-- Sun: shown in dark theme (click for light) -->
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4.5" />
+          <path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8" />
+        </svg>
+        <span class="visually-hidden">Dark mode</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ========== Hero ========== -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <p class="hero__greeting">Hi, I'm</p>
+        <h1 id="hero-title" class="hero__name">Marcos Morales Márquez</h1>
+        <p class="hero__tagline">Computer Engineer</p>
+        <p class="hero__intro">
+          Computer Engineering graduate with experience in C++, Java, JavaScript, Python and databases.
+        </p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#projects">View my work</a>
+          <a class="button button--secondary" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== About ========== -->
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title" class="section__title">About me</h2>
+        <p class="about__bio">
+          I'm a Computer Engineering graduate from the Universidad de Cádiz, with a mention in Information Systems. I have worked with Java and Spring Boot, C#, C++, JavaScript, Python and SQL databases, and I interned as a DevOps engineer at Babel in 2025. My final degree project, graded 9/10, applied Deep Reinforcement Learning to a real-time strategy video game built in Unity. I speak Spanish natively and English at a B2 level.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== Skills ========== -->
+    <section id="skills" class="section skills" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 id="skills-title" class="section__title">Skills</h2>
+
+        <!-- One <li> per group. Add or remove groups and tags freely. -->
+        <ul class="skill-grid">
+          <li class="skill-group">
+            <h3 class="skill-group__title">Programming languages</h3>
+            <ul class="tag-list">
+              <li class="tag">C++</li>
+              <li class="tag">C#</li>
+              <li class="tag">Java</li>
+              <li class="tag">JavaScript</li>
+              <li class="tag">Python</li>
+              <li class="tag">PHP</li>
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+            </ul>
+          </li>
+
+          <li class="skill-group">
+            <h3 class="skill-group__title">Frameworks and backend</h3>
+            <ul class="tag-list">
+              <li class="tag">Spring Boot</li>
+              <li class="tag">Node.js</li>
+              <li class="tag">Unity</li>
+              <li class="tag">REST</li>
+              <li class="tag">SOAP</li>
+              <li class="tag">Kafka</li>
+              <li class="tag">Maven</li>
+              <li class="tag">Mockito</li>
+            </ul>
+          </li>
+
+          <li class="skill-group">
+            <h3 class="skill-group__title">Databases</h3>
+            <ul class="tag-list">
+              <li class="tag">MySQL</li>
+              <li class="tag">Oracle</li>
+              <li class="tag">PostgreSQL</li>
+            </ul>
+          </li>
+
+          <li class="skill-group">
+            <h3 class="skill-group__title">Tools and DevOps</h3>
+            <ul class="tag-list">
+              <li class="tag">Git</li>
+              <li class="tag">Gitflow</li>
+              <li class="tag">Fork</li>
+              <li class="tag">Docker</li>
+              <li class="tag">Azure DevOps</li>
+              <li class="tag">Prometheus</li>
+              <li class="tag">Jira</li>
+              <li class="tag">Postman</li>
+              <li class="tag">DBeaver</li>
+            </ul>
+          </li>
+
+          <li class="skill-group">
+            <h3 class="skill-group__title">Practices</h3>
+            <ul class="tag-list">
+              <li class="tag">SOLID</li>
+              <li class="tag">Clean Code</li>
+              <li class="tag">Hexagonal Architecture</li>
+              <li class="tag">MVC</li>
+              <li class="tag">Unit Testing</li>
+              <li class="tag">Scrum</li>
+            </ul>
+          </li>
+
+          <li class="skill-group">
+            <h3 class="skill-group__title">Languages</h3>
+            <ul class="tag-list">
+              <li class="tag">Spanish (native)</li>
+              <li class="tag">English (B2, preparing C1)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== Experience (work and education) ========== -->
+    <section id="experience" class="section experience" aria-labelledby="experience-title">
+      <div class="container">
+        <h2 id="experience-title" class="section__title">Experience</h2>
+
+        <div class="experience__columns">
+          <!-- Newest first. Copy a <li class="timeline__item"> to add an entry. -->
+          <div class="experience__column">
+            <h3 class="experience__subtitle">Work</h3>
+            <ol class="timeline">
+              <li class="timeline__item">
+                <h4 class="timeline__title">DevOps Engineer (Internship)</h4>
+                <p class="timeline__meta">Babel · March 2025 - September 2025</p>
+                <p class="timeline__description">
+                  A two-month Java Spring bootcamp, followed by four months working for a banking client. Fixed dozens of vulnerabilities, patched the 8 development and test servers of two projects, managed firewalls and Non Personal Accounts, handled monitoring and alerts, decommissioned external connections, and kept both projects compliant with their IT Risk controls.
+                </p>
+              </li>
+              <li class="timeline__item">
+                <h4 class="timeline__title">IT Volunteer</h4>
+                <p class="timeline__meta">Colegio Salesiano Manuel Lora Tamayo · September 2022 - June 2023</p>
+                <p class="timeline__description">
+                  Repaired about 12 computers and maintained connections and hardware. Built a Java attendance tracker that replaced the manual logging of each volunteer's entry and exit, and migrated the school's recipient records from Excel spreadsheets to a MySQL database. Both stayed in use afterwards.
+                </p>
+              </li>
+              <li class="timeline__item">
+                <h4 class="timeline__title">Computer Engineer (Internship)</h4>
+                <p class="timeline__meta">Dynamics VR SL · June 2022 - August 2022</p>
+                <p class="timeline__description">
+                  Developed CRUD operations and tests for the company's MySQL database, built the back-end for its website, and maintained the database, which went into production.
+                </p>
+              </li>
+            </ol>
+          </div>
+
+          <div class="experience__column">
+            <h3 class="experience__subtitle">Education</h3>
+            <ol class="timeline">
+              <li class="timeline__item">
+                <h4 class="timeline__title">Computer Engineering degree</h4>
+                <p class="timeline__meta">Universidad de Cádiz · September 2019 - July 2026</p>
+                <p class="timeline__description">
+                  Mention in Information Systems. Final degree project graded 9/10: Prism Guard, a real-time strategy video game in Unity (C#) with a hero unit trained with Deep Reinforcement Learning (ML-Agents) to choose its targets and use its abilities.
+                </p>
+              </li>
+              <li class="timeline__item">
+                <h4 class="timeline__title">Java Spring Bootcamp (200 hours)</h4>
+                <p class="timeline__meta">Babel · March 2025 - April 2025</p>
+                <p class="timeline__description">
+                  Java, Spring Boot, SOLID principles, Clean Code, hexagonal architecture, unit testing with Mockito, REST and SOAP, Kafka, Docker, PostgreSQL, Scrum and Gitflow.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Projects ========== -->
+    <section id="projects" class="section projects" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title" class="section__title">Projects</h2>
+
+        <ul class="project-grid">
+          <li>
+            <article class="project-card">
+              <h3 class="project-card__title">Prism Guard: a real-time strategy game with a self-learning AI</h3>
+              <p class="project-card__description">
+                Final degree project, graded 9/10: a 3D real-time strategy and base-management game built in Unity, where you defend a crystal from waves of enemies. Its hero unit is trained with Deep Reinforcement Learning (ML-Agents, PPO): it learns when to use abilities such as area damage, self-healing and area healing without wasting them, and which targets to attack first depending on the situation. A playable Windows build is available in the repository.
+              </p>
+              <ul class="tag-list" aria-label="Technologies">
+                <li class="tag">Unity</li>
+                <li class="tag">C#</li>
+                <li class="tag">ML-Agents</li>
+                <li class="tag">Machine Learning</li>
+                <li class="tag">Deep Reinforcement Learning</li>
+              </ul>
+              <a class="project-card__link" href="https://github.com/kirtashK/TFG-PrismGuard">
+                <span>View project</span>
+                <span class="visually-hidden">: Prism Guard: a real-time strategy game with a self-learning AI</span>
+              </a>
+            </article>
+          </li>
+
+          <li>
+            <article class="project-card">
+              <h3 class="project-card__title">Game mods for Minecraft, Hytale and Songs of Syx</h3>
+              <p class="project-card__description">
+                11 mods across three games, with over 47,000 unique subscribers combined and about 96% positive ratings (over 550 ratings). They range from performance improvements and content overhauls to new enemies, new weapons and farming automation.
+              </p>
+              <ul class="tag-list" aria-label="Technologies">
+                <li class="tag">Java</li>
+                <li class="tag">Game modding</li>
+              </ul>
+              <p class="project-card__note">Published on the Steam Workshop and CurseForge</p>
+            </article>
+          </li>
+
+          <li>
+            <article class="project-card">
+              <h3 class="project-card__title">Portfolio website</h3>
+              <p class="project-card__description">
+                This site: a responsive, accessible portfolio in English and Spanish with a dark theme, built with plain HTML, CSS and JavaScript.
+              </p>
+              <ul class="tag-list" aria-label="Technologies">
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">JavaScript</li>
+              </ul>
+              <a class="project-card__link" href="https://github.com/kirtashK/Portfolio">
+                <span>View project</span>
+                <span class="visually-hidden">: Portfolio website</span>
+              </a>
+            </article>
+          </li>
+
+          <li>
+            <article class="project-card">
+              <h3 class="project-card__title">Volunteer attendance tracker</h3>
+              <p class="project-card__description">
+                Java program that replaced the manual logging of each volunteer's entry and exit at Colegio Salesiano Manuel Lora Tamayo, alongside a MySQL database that took over the recipient records previously kept in Excel.
+              </p>
+              <ul class="tag-list" aria-label="Technologies">
+                <li class="tag">Java</li>
+                <li class="tag">MySQL</li>
+              </ul>
+              <p class="project-card__note">Source code not available</p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== Contact ========== -->
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title" class="section__title">Contact</h2>
+        <p class="contact__intro">
+          I'm open to new opportunities and able to work remotely. Feel free to get in touch.
+        </p>
+        <ul class="contact-list">
+          <li>
+            <a class="contact-list__link" href="mailto:marcos.moralesm@hotmail.com">
+              <span class="contact-list__label">Email</span>
+              <span class="contact-list__value">marcos.moralesm@hotmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact-list__link" href="https://github.com/kirtashK" rel="me">
+              <span class="contact-list__label">GitHub</span>
+              <span class="contact-list__value">github.com/kirtashK</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact-list__link" href="https://www.linkedin.com/in/marcosmoralesmarquez/" rel="me">
+              <span class="contact-list__label">LinkedIn</span>
+              <span class="contact-list__value">linkedin.com/in/marcosmoralesmarquez</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== Footer ========== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>
+        &copy; <span id="current-year">2026</span> <span>Marcos Morales Márquez</span>.
+        <span>Built with plain HTML, CSS and JavaScript.</span>
+      </p>
+      <a class="site-footer__top-link" href="#hero">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>
