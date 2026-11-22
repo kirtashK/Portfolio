@@ -11,7 +11,7 @@ My personal portfolio website: a single-page static site in English and Spanish,
 
 ## Features
 
-- **Six sections**: hero, about, skills, experience (work and education), projects and contact.
+- **Six sections**: hero, about, skills, experience (work, volunteering, education and certifications), projects (featured and academic) and contact.
 - **Two languages**: English and Spanish as two hand-written pages. The EN | ES switcher keeps you on the section you were reading.
 - **Light and dark themes**: follows the system setting on the first visit, remembers your choice afterwards, and never flashes the wrong theme while loading.
 - **Sticky navigation**: the header stays in view and highlights the section you are reading.
